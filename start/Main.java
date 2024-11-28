@@ -3,9 +3,7 @@ package start;
 
 import facade.TaskManagerFacade;
 import factory.SimpleTaskFactory;
-import factory.ComplexTaskFactory;
 import strategy.ListViewStrategy;
-import strategy.BoardViewStrategy;
 import observer.EmailNotification;
 import observer.TaskNotifier;
 
