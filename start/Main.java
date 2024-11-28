@@ -1,5 +1,5 @@
 
-package Task;
+package start;
 
 import facade.TaskManagerFacade;
 import factory.SimpleTaskFactory;
@@ -16,11 +16,7 @@ public class Main {
         TaskNotifier notifier = new TaskNotifier();
         notifier.addObserver(new EmailNotification());
 
-        TaskManagerFacade facade = new TaskManagerFacade(
-                new SimpleTaskFactory(),
-                new ListViewStrategy(),
-                notifier
-        );
+        TaskManagerFacade facade = new TaskManagerFacade( new SimpleTaskFactory(),new ListViewStrategy(),notifier );
 
         // Crear tareas
         facade.createTask("Simple", "Tarea 1", "Descripción", "2024-11-30");

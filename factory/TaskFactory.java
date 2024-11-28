@@ -1,5 +1,5 @@
 package factory;
 
 public interface TaskFactory {
-    Task createTask(String name, String description, String dueDate);
+    Task createTask(String type, String name, String description, String dueDate);
 }

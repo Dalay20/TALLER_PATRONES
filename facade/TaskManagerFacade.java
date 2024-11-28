@@ -1,5 +1,10 @@
 package facade;
 
+import factory.Task;
+import factory.TaskFactory;
+import observer.TaskNotifier;
+import strategy.TaskViewStrategy;
+
 public class TaskManagerFacade {
     private TaskFactory taskFactory;
     private TaskViewStrategy viewStrategy;
@@ -14,6 +19,7 @@ public class TaskManagerFacade {
     public Task createTask(String type, String name, String description, String dueDate) {
         return taskFactory.createTask(type, name, description, dueDate);
     }
+   
 
     public void displayTasks() {
         viewStrategy.display();
